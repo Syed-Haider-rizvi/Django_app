@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Django Website</title>
+
+    <style>
+
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5faf8;
+            color: #173b35;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #064e3b;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #6ee7b7;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 570px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ecfdf5, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h3 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 75px;
+            color: #047857;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background: #059669;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #064e3b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 50px 8%;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            flex: 1;
+            min-width: 220px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            color: #047857;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            text-align: center;
+            background: #ecfdf5;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            background: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .features {
+                padding: 30px 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+
+        <div class="logo">
+            Django
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h3>Welcome to</h3>
+
+            <h1>Django!</h1>
+
+            <h2>My First Django Project</h2>
+
+            <p>
+                Hello! This is my first website using Django.
+                I am learning Python, Django, HTML and CSS
+                step by step.
+            </p>
+
+            <button class="btn" onclick="showMessage()">
+                Click Me
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+
+        <div class="feature-card">
+
+            <div class="icon">🚀</div>
+
+            <h3>Fast</h3>
+
+            <p>
+                Django helps developers build
+                powerful web applications quickly.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="icon">🔒</div>
+
+            <h3>Secure</h3>
+
+            <p>
+                Django provides built-in security
+                features for web applications.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="icon">⚙️</div>
+
+            <h3>Flexible</h3>
+
+            <p>
+                Django makes it easy to develop
+                and extend web applications.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About My Project</h2>
+
+        <p>
+            This is my first Django learning project.
+            I am exploring how Django connects Python,
+            HTML and CSS to create dynamic websites.
+            My goal is to become a professional
+            Python Django developer.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 My Django Project |
+            Learning Django Step by Step
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function showMessage() {
+
+            alert("Congratulations! Your Django website is working successfully!");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
